@@ -1,0 +1,64 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+.container{
+    background-color: teal;
+    height: 100vh;
+    margin: 10px;
+    padding: 10px;
+}
+
+.item{
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    margin-bottom: 10px;
+} */
+
+/* End of base styles */
+
+/* .container{ */
+    /* display: flex; */
+    /* gap: 10px; */
+    /* flex-wrap: wrap; */
+    /* align-content: flex-end; */
+    
+/* } */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+span{
+    font-size: 4rem;
+    border: 1px solid red;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+span::before{
+    left: 0px;
+}
+
+span::after{
+    right: 0px;
+}
+span::before, span::after {
+    content: "";
+    position: absolute;
+    top: 42%;
+    width: 43%;
+    height: 10px;
+    background-color: black;
+
+}
+
+
+
