@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #4682B4); /* Sky-blue background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.droplet-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.droplet {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), rgba(173, 216, 230, 0.5));
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a slight depth effect */
+    animation: fall 3s infinite ease-in-out;
+    filter: blur(0.5px); /* Optional: Adds softness */
+}
+
+/* Randomly place droplets */
+.droplet:nth-child(1) {
+    left: 10%;
+    top: 5%;
+    animation-delay: 0s;
+    width: 25px;
+    height: 25px;
+}
+.droplet:nth-child(2) {
+    left: 30%;
+    top: 15%;
+    animation-delay: 0.5s;
+    width: 20px;
+    height: 20px;
+}
+.droplet:nth-child(3) {
+    left: 50%;
+    top: 25%;
+    animation-delay: 1s;
+    width: 15px;
+    height: 15px;
+}
+.droplet:nth-child(4) {
+    left: 70%;
+    top: 10%;
+    animation-delay: 1.5s;
+    width: 35px;
+    height: 35px;
+}
+.droplet:nth-child(5) {
+    left: 90%;
+    top: 20%;
+    animation-delay: 2s;
+    width: 25px;
+    height: 25px;
+}
+
+/* Falling animation */
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
