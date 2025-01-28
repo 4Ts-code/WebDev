@@ -1,0 +1,48 @@
+body{
+    background-color: #0b0d10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    padding: 1em 2em;
+    background-color: #161a20;
+    border: none;
+    color: #f0f0f0;
+    border-radius: 1000px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+
+    /* Center both the after and the button  */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+button::after{
+    content: "";
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    width: 105%;
+    height: 110%;
+    background-color: wheat;
+    border-radius: 1000px;
+    border: none;
+    z-index: -1;
+    background-image: linear-gradient(to right, blue , purple);
+
+}
+
+button:hover{
+    z-index: 0;   /*The gradient colour would fill the button */
+
+    /* Glowing Effect is by creating 2 overlapping shadows  */
+
+    box-shadow: -40px 0 100px rgba(238, 130, 238, 0.521), 40px 0 100px rgba(0, 0, 255, 0.589);
+}
