@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    overflow: hidden;  /* Hide the content outside the container */
+    width: 100%; /* Adjust based on your design */
+}
+
+.card {
+    width: 200px;
+    height: 100px;
+    margin-right: 20px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+/* Apply animation to move cards */
+@keyframes moveCards {
+    0% {
+        transform: translateX(0); /* Start at the left */
+    }
+    100% {
+        transform: translateX(-100%); /* Move all the way to the left */
+    }
+}
+
+/* Apply animation to the container to move cards */
+.card-container {
+    animation: moveCards 10s linear infinite;
+}
+
+/* Add this to make sure when the first card goes out of view, it will not come back */
+.card-container {
+    display: flex;
+    animation: moveCards 10s linear infinite;
+    will-change: transform; /* Optimizes performance */
+}
+
+.card:first-child {
+    margin-right: 0; /* Remove the right margin for the first card */
+}
